@@ -4,11 +4,13 @@ class JobsController < ApplicationController
     # GET /jobs
     def index
         @jobs = Job.all
+        render json: @jobs
     end
     
     # GET /jobs/:id
     def show
         @job = Job.find(params[:id])
+        render json: @job
     end
     
     # POST /jobs
